@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Equation Solver</title>
+    <link href='https://fonts.googleapis.com/css?family=Zen Tokyo Zoo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/static/js/yolo.js"></script>
+
+
+</head>
+
+<style>
+    h1 { font-family: 'Zen Tokyo Zoo';font-size: 75px; }
+</style>
+
+<body onload="init()">
+    <br>
+    <br>
+    <div style="text-align:center;">
+        <h1><strong>D I A L Ý T I S</strong></h1>
+    </div>
+    <div>
+    <form id = "myForm" method="POST" enctype="multipart/form-data">
+        <div>
+            <canvas id="can" width="1200" height="280" style="position:absolute;top:20%;left:10%;border:2px solid;"></canvas>
+        </div>
+        <input type="hidden" id = 'url' name="url" value="">
+        <div>
+                <input type="button" class="btn btn-primary" value="Save" id="btn" size="50" onclick="save()" style="position:absolute;top:65%;left:40%;">
+                <input type="button" class="btn btn-primary" value="Clear" id="clr" size="50" onclick="erase()" style="position:absolute;top:65%;left:50%;">
+                <button type="submit" class="btn btn-primary" value="Predict" onclick="save1()" id="pred"  formaction="/predict" style="position:absolute;top:65%;left:60%;">Predict</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
