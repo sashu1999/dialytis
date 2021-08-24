@@ -67,4 +67,4 @@ def get_values(image):
 
 
 def save_image(image):
-    cv2.imwrite("temp.jpg",image)
+    cv2.imwrite("temp.jpg", image)
