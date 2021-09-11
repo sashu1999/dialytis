@@ -8,8 +8,6 @@ def math_expression_generator(arr):
 
     m_exp = []
     temp = []
-
-    'creating a list separating all elements'
     for item in arr:
         if item not in op:
             temp.append(item)
@@ -19,8 +17,6 @@ def math_expression_generator(arr):
             temp = []
     if temp:
         m_exp.append(temp)
-
-    'converting the elements to numbers and operators'
     i = 0
     num = 0
     for item in m_exp:
@@ -44,8 +40,6 @@ def math_expression_generator(arr):
             m_exp[i] = m_exp[i].replace("13", "*")
 
             i = i + 1
-
-    'joining the list of strings to create the mathematical expression'
     separator = ' '
     m_exp_str = separator.join(m_exp)
 
@@ -54,9 +48,8 @@ def math_expression_generator(arr):
 def caluclate(eq):
     while True:
         try:
-            answer = eval(eq)  # evaluating the answer
+            answer = eval(eq)
             answer = round(answer, 2)
-            equation = eq + " = " + str(answer)
             return [1,eq,answer]
             break
 
