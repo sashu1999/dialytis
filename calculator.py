@@ -1,3 +1,5 @@
+from manual_evaluate import calculate
+
 def math_expression_generator(arr):
     op = {
         10,  # = "/"
@@ -48,8 +50,7 @@ def math_expression_generator(arr):
 def caluclate(eq):
     while True:
         try:
-            answer = eval(eq)
-            answer = round(answer, 2)
+            answer = calculate(eq)
             return [1,eq,answer]
             break
 
