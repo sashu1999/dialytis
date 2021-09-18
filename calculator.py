@@ -51,8 +51,8 @@ def caluclate(eq):
     while True:
         try:
             answer = eval(eq)
-            #answer = calculate(eq)
-            return [1,eq,answer]
+            manual_answer = calculate(eq)
+            return [1,eq,manual_answer]
             break
 
         except SyntaxError:
