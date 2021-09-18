@@ -13,12 +13,6 @@ def hasLessOrEqualPriority(a, b):
     x = precedence[a] <= precedence[b]
     return x
 
-def is_expression_correct(exp):
-    for i in range(0,len(exp),2):
-        x = exp[i:i+3]
-        if not (x[0].isnumeric() and x[2].isnumeric() and x[1] in ['+','-','*','/']):
-            return False
-        return True
      
 def initial_expression(expression):
     temp = ''
@@ -78,9 +72,6 @@ def evalPostfix(postfix):
 
 def calculate(exp):
     exp_v1 = initial_expression(exp)
-    if is_expression_correct(exp):
-        exp_v2 = toPostfix(exp_v1)
-        final = evalPostfix(exp_v2)
-        return final
-    else:
-        return "Invalid"
+    exp_v2 = toPostfix(exp_v1)
+    final = evalPostfix(exp_v2)
+    return final
