@@ -50,6 +50,7 @@ def math_expression_generator(arr):
 def caluclate(eq):
     while True:
         try:
+            answer = eval(eq)
             answer = calculate(eq)
             return [1,eq,answer]
             break
